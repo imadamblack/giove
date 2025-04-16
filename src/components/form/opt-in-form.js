@@ -65,7 +65,7 @@ export default function OptInForm({lastClick = ''}) {
             },
           )}
           className={errors.fullName && '!bg-red-200'}
-          placeholder="Tu nombre"/>
+          placeholder="Nombre"/>
         <input
           {...register(
             'email',
@@ -78,7 +78,7 @@ export default function OptInForm({lastClick = ''}) {
             },
           )}
           className={errors.email && '!bg-red-200'}
-          placeholder="Un email activo"/>
+          placeholder="Email"/>
         <input
           {...register(
             'phone',
@@ -86,7 +86,7 @@ export default function OptInForm({lastClick = ''}) {
           )}
           className={errors.phone && '!bg-red-200'}
           onKeyDown={restrictNumber}
-          placeholder="Teléfono de WhatsApp"/>
+          placeholder="Numero de WhatsApp"/>
 
         <button
           disabled={sending}

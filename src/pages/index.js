@@ -44,7 +44,7 @@ export default function Home() {
   });
 
   const cta = {
-    main: 'Regístrate, da clic',
+    main: 'Contacto, da clic',
     description: 'Ver más detalles',
   };
 
@@ -62,7 +62,7 @@ export default function Home() {
 
         <div className="container mt-auto w-full text-center z-50 p-8">
           <h1
-            className="md:w-2/3 mx-auto relative ft-8 text-white [text-shadow:_1px_1px_0_rgb(0_0_0_/_20%)] md:[text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
+            className="md:w-2/3 mx-auto relative ft-8 text-white [text-shadow:_1px_1px_0_rgb(0_0_0_/_20%)] md:[text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)] text-xl">
             Tu historia merece ser contada en oro y diamantes
           </h1>
           {/*<p className="ft-3 mt-4 mb-0 text-white">Consultoría y capacitación especializada en normas y
@@ -96,9 +96,9 @@ export default function Home() {
       />
 {/*------------------------------------------------------------------ */}
       <section className="my-16">
-        <p className="reading-container">
+        {/* <p className="reading-container">
           Te comparto tres razones para que inviertas en el crecimiento de tu empresa (no vas a necesitar más):
-        </p>
+        </p> */}
         <div className="container grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-16">
           <div className="flex flex-col justify-center items-center">
             <h3 className="order-1 md:order-2 mb-8 text-brand-1 font-bold">Conocemos tu historia</h3>
@@ -409,7 +409,7 @@ export default function Home() {
       />
 {/*------------------------------------------------------------------ */}
       <section className="my-16">
-        <div className="flex flex-col items-center justify-center md:mx-52 mx-8">
+        <div className="flex flex-col items-center justify-center md:mx-52 mx-8 pt-16 pb-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto">
             <div className="w-full flex flex-col bg-brand-2 rounded-2xl overflow-hidden">
               <div className="flex flex-col gap-10 px-20 py-16 flex-grow">
@@ -473,8 +473,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        <div className="container grid grid-cols-1 gap-8">
+{/* marcas */}
+        {/* <div className="container grid grid-cols-1 gap-8">
           <div className="relative w-full h-[10rem] md:h-[20rem]">
             <Image src={clientes1} layout="fill" objectFit="contain"/>
           </div>
@@ -495,18 +495,18 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center mt-16">
           <Link href="#contact"><a className="button mb-4">{cta.main}</a></Link>
           <p className="-ft-2 text-center">{cta.description}</p>
-        </div>
+        </div> */}
       </section>
 {/*------------------------------------------------------------------ */}
 
 
-      <Blockbuster
+      {/* <Blockbuster
         overhead="Garantías"
         title="Capacitación con respaldo, confianza y resultados"
         image={i10}
-      />
+      /> */}
 {/*------------------------------------------------------------------ */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-12 bg-brand-1 flex items-center rounded-2xl">
             <p className="ft-2 text-white">15 años de experiencia nos respaldan</p>
@@ -530,7 +530,7 @@ export default function Home() {
           <p className="-ft-2 text-center">{cta.description}</p>
         </div>
 
-      </section>
+      </section> */}
 {/*------------------------------------------------------------------ */}
 
       {/*<Blockbuster*/}
@@ -575,7 +575,7 @@ export default function Home() {
         <div className="container">
           <div className="w-full md:w-1/2 mx-auto">
             <h2 className="text-brand-1">
-              Si ya leíste todo hasta acá, creo que es hora de ponernos en contacto
+            Agenda una consulta gratuita con nuestro equipo y comencemos el proceso de creación.
             </h2>
             <p className="ft-1 my-8">
               Déjanos tus datos para programar una consultoría gratuita sobre las necesidades de capacitación de tu

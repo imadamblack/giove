@@ -1,7 +1,7 @@
 export const info = {
   legalName: "BLUE HAND S.A. DE C.V.",
-  companyName: "BH Consulting",
-  description: "Certificate en ISO",
+  companyName: "Giove",
+  description: "Joyas exclusivas de plata y oro, con piedras preciosas y semipreciosas.",
   email: {
     sender: "",
     recipients: [""],

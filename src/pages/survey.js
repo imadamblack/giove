@@ -1,70 +1,137 @@
 'use client';
 import { useForm, FormProvider } from 'react-hook-form';
 import { useEffect, useState } from 'react';
-import { Radio, Checkbox } from '../components/form/formAtoms';
+import { Radio } from '../components/form/formAtoms';
 import { useRouter } from 'next/router';
 import { setCookie, getCookie } from 'cookies-next';
 import { info } from '../../info';
 import fbEvent from '../services/fbEvents';
 import { restrictNumber } from '../utils/formValidators';
+import Image from 'next/image';
+
+const AnilloCompromiso = () => (
+  <div className="flex flex-col items-center w-full">
+    <div className="relative w-2/3 pt-[5rem] mb-4">
+      <Image src="/landing/ico01.png" layout="fill" objectPosition="center" objectFit="contain"/>
+    </div>
+    <p>Anillo de compromiso</p>
+  </div>
+);
+
+const AnilloBoda = () => (
+  <div className="flex flex-col items-center w-full">
+    <div className="relative w-2/3 pt-[5rem] mb-4">
+      <Image src="/landing/ico01.png" layout="fill" objectPosition="center" objectFit="contain"/>
+    </div>
+    <p>Anillo de bodas</p>
+  </div>
+);
+const Pulsera = () => (
+  <div className="flex flex-col items-center w-full">
+    <div className="relative w-2/3 pt-[5rem] mb-4">
+      <Image src="/landing/ico01.png" layout="fill" objectPosition="center" objectFit="contain"/>
+    </div>
+    <p>Pulsera</p>
+  </div>
+);
+const Cadena = () => (
+  <div className="flex flex-col items-center w-full">
+    <div className="relative w-2/3 pt-[5rem] mb-4">
+      <Image src="/landing/ico01.png" layout="fill" objectPosition="center" objectFit="contain"/>
+    </div>
+    <p>Cadena</p>
+  </div>
+);
+
+const Dije = () => (
+  <div className="flex flex-col items-center w-full">
+    <div className="relative w-2/3 pt-[5rem] mb-4">
+      <Image src="/landing/ico01.png" layout="fill" objectPosition="center" objectFit="contain"/>
+    </div>
+    <p>Dije</p>
+  </div>
+);
+
+const Arete = () => (
+  <div className="flex flex-col items-center w-full">
+    <div className="relative w-2/3 pt-[5rem] mb-4">
+      <Image src="/landing/ico01.png" layout="fill" objectPosition="center" objectFit="contain"/>
+    </div>
+    <p>Arete</p>
+  </div>
+);
 
 const formSteps = [
+  // {
+  //   name: 'title',
+  //   title: `¿Qué tipo de pieza estás buscando?`,
+  //   type: 'radio',
+  //   options: [
+  //     {value: 'anilloCompromiso', label: <AnilloCompromiso/>},
+  //     {value: 'anilloBoda', label: <AnilloBoda/>},
+  //     {value: 'pulsera', label: <Pulsera/>},
+  //     {value: 'cadena', label: <Cadena/>},
+  //     {value: 'dije', label: <Dije/>},
+  //     {value: 'aretes', label: <Arete/>},
+  //   ],
+  //   cols: 3,
+  //   inputOptions: {required: true},
+  // },
   {
     name: 'title',
-    title: `Compártenos un poco más sobre tu empresa para perfilarte mejor`,
-    description: '¿Qué puesto desempeñas en la empresa?',
+    title: `¿Qué tipo de pieza estás buscando?`,
     type: 'radio',
     options: [
-      {value: 'director', label: 'Dirección General'},
-      {value: 'administracion', label: 'Administración'},
-      {value: 'recursos-humanos', label: 'Gerencia Recursos Humanos'},
-      {value: 'producción', label: 'Gerencia Producción'},
-      {value: 'otro', label: 'Otro'},
+      {value: 'anilloCompromiso', label: 'Anillo de compromiso'},
+      {value: 'anilloBoda', label: 'Anillos de bodas'},
+      {value: 'Churumbela', label: 'Churumbela'},
+      {value: 'pulsera', label: 'Pulsera / Esclava'},
+      {value: 'cadena', label: 'Cadena'},
+      {value: 'aretes', label: 'Aretes'},
     ],
-    cols: 1,
-    inputOptions: {required: true}
+    cols: 2,
+    inputOptions: {required: true},
   },
   {
-    name: 'companySize',
-    title: '¿Con cuántos colaboradores cuenta la empresa?',
+    name: 'material',
+    title: '¿De qué material?',
     description: 'Selecciona una opción por favor',
     type: 'radio',
     options: [
-      {value: '<10', label: 'Menos de 10'},
-      {value: '10-50', label: 'De 10 a 50'},
-      {value: '50-100', label: 'De 50 a 100'},
-      {value: '100+', label: 'Más de 100'},
+      {value: 'oro', label: 'Oro'},
+      {value: 'oro-blanco', label: 'Oro Blanco'},
+      {value: 'plata', label: 'Plata'},
     ],
     cols: 1,
-    inputOptions: {required: true}
+    inputOptions: {required: true},
   },
   {
-    name: 'area',
-    title: '¿En qué área te interesa certificarte?',
+    name: 'material',
+    title: '¿Con qué piedras?',
+    description: 'Selecciona una opción por favor',
     type: 'radio',
     options: [
-      {value: 'calidad', label: 'Calidad'},
-      {value: 'inocuidad', label: 'Inocuidad'},
-      {value: 'medio-ambiente', label: 'Medio ambiente'},
-      {value: 'seguridad-salud', label: 'Seguridad y Salud ocupacional'},
-      {value: 'ti', label: 'Tecnologías de la información'},
+      {value: 'diamante', label: 'Diamante natural'},
+      {value: 'diamante-lab', label: 'Diamante de laboratorio'},
+      {value: 'esmeralda', label: 'Esmeralda'},
+      {value: 'rubi', label: 'Rubí'},
+      {value: 'sin-piedra', label: 'No quiero piedras'},
     ],
     cols: 1,
-    inputOptions: {required: true}
+    inputOptions: {required: true},
   },
-  // {
-  //   name: 'commitment',
-  //   title: 'Estás a punto de programar una sesión con nosotros ¿contamos con tu asistencia puntual?',
-  //   description: 'Dado al volumen de solicitudes que tenemos, en ocasiones es complicado reprogramar.',
-  //   type: 'radio',
-  //   options: [
-  //     {value: 'si', label: 'Claro que sí!'},
-  //     {value: 'recordar', label: 'Recuérdenme por favor'},
-  //     {value: 'no', label: 'No sé'},
-  //   ],
-  //   cols: 3,
-  //   inputOptions: {required: true}
-  // },
+  {
+    name: 'name',
+    title: 'Regálame tu nombre',
+    type: 'text',
+    inputOptions: {required: true},
+  },
+  {
+    name: 'phone',
+    title: 'Ahora un WhatsApp para contactarte',
+    type: 'number',
+    inputOptions: {required: true},
+  },
 ];
 
 export default function Survey() {
@@ -77,7 +144,7 @@ export default function Survey() {
     handleSubmit,
     setError,
     formState: {errors},
-    watch
+    watch,
   } = methods;
 
   const router = useRouter();
@@ -105,7 +172,7 @@ export default function Survey() {
     const _fbp = getCookie('_fbp');
 
     const payload = {...data, id, fullName, email, phone, _fbc, _fbp};
-    console.log('payload',payload);
+    console.log('payload', payload);
 
     fetch(info.surveyWebhook, {
       method: 'POST',
@@ -114,10 +181,10 @@ export default function Survey() {
         'Content-Type': 'application/json',
       },
     }).then((response) => response)
-      // .then(() => fbEvent(
-      //   'Lead',
-      //   {email, phone, externalID: id},
-      // ))
+      .then(() => fbEvent(
+        'Lead',
+        {email, phone, externalID: id},
+      ))
       // Redirect to Thank you page and Scheduler
       .then(() => {
         if (info.surveyRedirect !== '') {
@@ -127,7 +194,7 @@ export default function Survey() {
           forwardLink.click();
         }
 
-        router.push(`/thankyou`);
+        router.push(`/`);
       });
   };
 
@@ -243,7 +310,7 @@ export default function Survey() {
                   className="mt-auto"
                 >
                   {sending && <span className="animate-spin mr-4">+</span>}
-                  {formStep === formSteps.length - 1 ? 'Agendar cita' : sending ? 'Abriendo Calendario' : 'Siguiente'}
+                  {formStep === formSteps.length - 1 ? 'Enviar' : sending ? 'Enviando' : 'Siguiente'}
                 </button>
               </div>
             </form>
@@ -252,25 +319,4 @@ export default function Survey() {
       </div>
     </div>
   );
-}
-
-export async function getServerSideProps(ctx) {
-  const {req, res, query: {id}} = ctx;
-  const lead = getCookie('lead', {req, res});
-
-  if (!lead || lead === 'null' || Object.keys(lead).length === 0) {
-    if (!id) {
-      return {
-        redirect: {
-          permanent: false,
-          destination: '/#contact',
-        },
-      };
-    } else {
-      setCookie('lead', {...lead, id}, {req, res});
-      return {props: {}};
-    }
-  }
-
-  return {props: {}}
 }

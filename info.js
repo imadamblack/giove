@@ -1,16 +1,16 @@
 export const info = {
-  legalName: "BLUE HAND S.A. DE C.V.",
+  legalName: "Giove",
   companyName: "Giove",
-  description: "Joyas exclusivas de plata y oro, con piedras preciosas y semipreciosas.",
+  description: "Joyas exclusivas de plata y oro, con piedras preciosas",
   email: {
     sender: "",
     recipients: [""],
-    subject: "Nuevo prospecto BH Consulting",
+    subject: "Nuevo prospecto Giove",
   },
-  phoneNumber: "+525549118039",
+  phoneNumber: "+523335596433",
   whatsapp: {
-    value: "+525549118039",
-    message: "Buen día, me puede dar más información sobre las capacitaciones",
+    value: "+523335596433",
+    message: "Buen día, quiero cotizar el diseño de una pieza",
   },
   social: {
     facebook: "",
@@ -23,8 +23,8 @@ export const info = {
     city: "",
     state: "",
   },
-  optInWebhook: 'https://hook.us1.make.com/32bwvw0odo2atzkwrujuq6qovyspoe45',
-  surveyWebhook: 'https://hook.us1.make.com/03gjfu412ubkinp3sbf8sbglikorezvw',
+  optInWebhook: 'https://hook.us1.make.com/6x2weapk31u2p1vvcaqm5sdnjmjldxnd',
+  surveyWebhook: 'https://hook.us1.make.com/jvjg4avfhuchyaeyma73ffo7m1285cwq',
   surveyRedirect: '',
   privacyNotice: "/aviso-privacidad",
   termsConditions: "/aviso-privacidad",

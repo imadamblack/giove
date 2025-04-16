@@ -5,7 +5,7 @@ $baseLead: 1.5;
 
 html {
   font-size: 62.5%;
-  font-family: typekit('fira-sans', 'fira-sans-condensed', 'inter'), sans-serif;
+  font-family: optima-lt-pro, sans-serif;
 }
 
 $fluid_steps: (
@@ -64,12 +64,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-block-start: 0;
 }
 h1, h2, h3 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "marlide-display-variable", sans-serif;
   @apply font-semibold;
 }
 
 h4, h5, h6 {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "marlide-display-variable", sans-serif;
   @apply font-bold;
 }
 

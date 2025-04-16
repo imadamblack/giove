@@ -1,11 +1,12 @@
-@import url('https://use.typekit.net/bbm7agp.css');
+@import url("https://use.typekit.net/bbm7agp.css");
+
 $titleLead: 1.1;
 $subtitleLead: 1.2;
 $baseLead: 1.5;
 
 html {
   font-size: 62.5%;
-  font-family: optima-lt-pro, sans-serif;
+  font-family: "optima-lt-pro", sans-serif;
 }
 
 $fluid_steps: (
@@ -15,7 +16,7 @@ $fluid_steps: (
   ft-8: (minSize: 2.68rem, maxSize: 4.36rem, lead: $titleLead),
   ft-7: (minSize: 2.5rem, maxSize: 3.88rem, lead: $titleLead),
   ft-6: (minSize: 2.36rem, maxSize: 3.45rem, lead: $titleLead),
-  ft-5: (minSize: 2.2rem, maxSize: 3.05rem,lead: $titleLead),
+  ft-5: (minSize: 2.2rem, maxSize: 3.05rem, lead: $titleLead),
   ft-4: (minSize: 2.1rem, maxSize: 2.7rem, lead: $subtitleLead),
   ft-3: (minSize: 1.95rem, maxSize: 2.4rem, lead: $baseLead),
   ft-2: (minSize: 1.8rem, maxSize: 2.15rem, lead: $baseLead),
@@ -48,35 +49,35 @@ $fluid_steps: (
   font-display: swap;
 }
 
-h1 { @extend .ft-10 }
-h2 { @extend .ft-7 }
-h3 { @extend .ft-4 }
-h4 { @extend .ft-3 }
-h5 { @extend .ft-2 }
-h6 { @extend .ft-1 }
-p { @extend .ft-0 }
-li { @extend .ft-0 }
-label { @extend .-ft-3 }
-b { @apply font-bold }
+h1 { @extend .ft-10; }
+h2 { @extend .ft-7; }
+h3 { @extend .ft-4; }
+h4 { @extend .ft-3; }
+h5 { @extend .ft-2; }
+h6 { @extend .ft-1; }
+p { @extend .ft-0; }
+li { @extend .ft-0; }
+label { @extend .-ft-3; }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-gray-700 tracking-normal;
+  font-family: "marlide-display-variable", sans-serif;
+  color: #4a5568; /* Equivalente a text-gray-700 */
+  letter-spacing: normal; /* Equivalente a tracking-normal */
   margin-block-start: 0;
 }
+
 h1, h2, h3 {
-  font-family: "marlide-display-variable", sans-serif;
-  @apply font-semibold;
+  font-weight: 600; /* Equivalente a font-semibold */
 }
 
 h4, h5, h6 {
-  font-family: "marlide-display-variable", sans-serif;
-  @apply font-bold;
+  font-weight: 700; /* Equivalente a font-bold */
 }
 
 p, li {
+  font-family: "optima-lt-pro", sans-serif;
+  letter-spacing: 0.05em; /* Equivalente a tracking-wide */
   margin-block-start: 0;
-  @apply tracking-wide;
-  // margin-block-end: 1rem;
 }
 
 a {

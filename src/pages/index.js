@@ -4,13 +4,12 @@ import Link from 'next/link';
 import OptInForm from '../components/form/opt-in-form';
 import { useEffect, useState } from 'react';
 import scrollDepth from '../utils/scrollDepth';
-import i00 from '../../public/landing/00.png';
-import i01 from '../../public/landing/01.png';
-import i02 from '../../public/landing/02.png';
-import i03 from '../../public/landing/03.png';
+import i01 from '../../public/landing/001.png';
+import i02 from '../../public/landing/002.png';
+import i03 from '../../public/landing/003.png';
 import i04 from '../../public/landing/04.png';
-import i05 from '../../public/landing/10.png';
-import i06 from '../../public/landing/06.png';
+import i05 from '../../public/landing/005.png';
+import i06 from '../../public/landing/006.png';
 import i07 from '../../public/landing/07.png';
 import i08 from '../../public/landing/08.png';
 import i09 from '../../public/landing/09.png';
@@ -39,28 +38,28 @@ export default function Home() {
 
   const cta = {
     main: 'Regístrate, da clic',
-    description: 'Programa una consultoría y diagnóstico de tu negocio gratuitos',
+    description: 'Ver más detalles',
   };
 
   return (
     <>
+{/*------------------------------------------------------------------ */}
       <section
         className="relative min-h-[60rem] md:min-h-[72rem] w-full flex flex-col md:justify-end items-center bg-brand-1">
 
         <div className="relative min-h-[24rem] flex-grow w-full md:absolute top-0 inset-x-0 bottom-1/2 md:bottom-0">
           <div
             className="w-full h-[24rem] md:h-[60rem] bottom-0 absolute bg-gradient-to-t from-brand-1 md:from-brand-2 via-transparent md:via-brand-1 to-transparent md:opacity-60 z-10"/>
-          <Image src={i00} layout="fill" className="object-cover object-right"/>
+          <Image src={i01} layout="fill" className="object-cover object-right"/>
         </div>
 
         <div className="container mt-auto w-full text-center z-50 p-8">
           <h1
             className="md:w-2/3 mx-auto relative ft-8 text-white [text-shadow:_1px_1px_0_rgb(0_0_0_/_20%)] md:[text-shadow:_2px_2px_0_rgb(0_0_0_/_20%)]">
-            Certificarte en ISO, FSSC, SQF y otras normas, no tendría que ser difícil si capacitas adecuadamente a tu
-            equipo
+            Tu historia merece ser contada en oro y diamantes
           </h1>
-          <p className="ft-3 mt-4 mb-0 text-white">Consultoría y capacitación especializada en normas y
-            certificaciones internacionales</p>
+          {/*<p className="ft-3 mt-4 mb-0 text-white">Consultoría y capacitación especializada en normas y
+            certificaciones internacionales</p>*/}
           <div className="flex flex-col justify-center items-center mt-12 md:text-white">
             {/*<Link href="#contact">*/}
             {/*  <a onClick={() => setLastClick('hero')} className="button mb-4">{cta.main}</a>*/}
@@ -71,56 +70,59 @@ export default function Home() {
 
         </div>
       </section>
-
+{/*------------------------------------------------------------------ */}
       <section className="container grid grid-cols-1 md:grid-cols-2 my-16">
-        <div className="relative">
+        <div className="relative min-h-[50vh]">
           <Image src={i02} layout="fill" objectFit="cover"/>
         </div>
-        <div className="reading-container">
-          <p className="ft-2">
-            En BH Consulting Group te ayudamos a capacitar a tu equipo en normas y certificaciones como ISO, FSSC, SQF,
-            BRCGS, entre otras;
-            <br/><br/>
-            para que generes más confianza con tus proveedores y clientes y te elijan a ti antes que a la competencia.
+        <div className="reading-container flex items-center justify-center">
+          <p className="ft-2 ">
+          Cada pieza que creamos es un reflejo de tu esencia. Diseñamos joyería personalizada con oro, plata y piedras preciosas certificadas, cuidando cada detalle para que tu joya trascienda generaciones.
           </p>
         </div>
       </section>
-
+{/*------------------------------------------------------------------ */}
       <Blockbuster
-        overhead="Beneficios"
-        title="Certificar tu empresa hoy es la diferencia entre perder contratos o liderar tu industria"
+        overhead="Proceso"
+        title="Cada pieza de Giove es una obra de arte hecha para ti y solo para ti."
         image={i03}
       />
+{/*------------------------------------------------------------------ */}
       <section className="my-16">
         <p className="reading-container">
           Te comparto tres razones para que inviertas en el crecimiento de tu empresa (no vas a necesitar más):
         </p>
-        <div className="container grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
-          <div className="flex flex-col">
-            <h3 className="order-1 md:order-2 mb-8 text-brand-1 font-bold">Más y mejores clientes</h3>
+        <div className="container grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-16">
+          <div className="flex flex-col justify-center items-center">
+            <h3 className="order-1 md:order-2 mb-8 text-brand-1 font-bold">Conocemos tu historia</h3>
             <div className="relative h-[24rem] overflow-hidden flex items-center order-2 md:order-1 mb-8">
-              <Image src={i03} className="object-cover"/>
+              <Image src={ico01} className="object-cover"/>
             </div>
-            <p className="order-3">Las empresas certificadas generan confianza y cumplen con los estándares que exigen
-              grandes clientes y proveedores</p>
+            <p className="order-3 text-justify">En una sesión privada, descubrimos la inspiración detrás de tu joya.</p>
           </div>
-          <div className="flex flex-col">
-            <h3 className="order-1 md:order-2 mb-8 text-brand-1 font-bold">Ventaja competitiva real</h3>
+          <div className="flex flex-col justify-center items-center">
+            <h3 className="order-1 md:order-2 mb-8 text-brand-1 font-bold">Diseñamos tu pieza</h3>
             <div className="relative h-[24rem] overflow-hidden flex items-center order-2 md:order-1 mb-8">
-              <Image src={i04} className="object-cover"/>
+              <Image src={ico02} className="object-cover"/>
             </div>
-            <p className="order-3">Aseguras que tu empresa cumpla con normativas y se convierta en la opción obvia del
-              mercado</p>
+            <p className="order-3 text-justify">Desde bocetos hasta renders 3D, perfeccionamos cada detalle.</p>
           </div>
-          <div className="flex flex-col">
-            <h3 className="order-1 md:order-2 mb-8 text-brand-1 font-bold">Retorno de tu inversión</h3>
+          <div className="flex flex-col justify-center items-center">
+            <h3 className="order-1 md:order-2 mb-8 text-brand-1 font-bold">Fabricación artesanal</h3>
             <div className="relative h-[24rem] overflow-hidden flex items-center order-2 md:order-1 mb-8">
-              <Image src={i05} className="object-cover"/>
+              <Image src={ico03} className="object-cover"/>
             </div>
-            <p className="order-3">Certificarte no son un gasto, es una inversión que te abre puertas a nuevos contratos
-              y mercados más rentables</p>
+            <p className="order-3 text-justify">Maestros joyeros elaboran tu pieza con los mejores materiales.</p>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <h3 className="order-1 md:order-2 mb-8 text-brand-1 font-bold">Entrega con distinción</h3>
+            <div className="relative h-[24rem] overflow-hidden flex items-center order-2 md:order-1 mb-8">
+              <Image src={ico04} className="object-cover"/>
+            </div>
+            <p className="order-3 text-justify">Recibes tu joya en un empaque de lujo, lista para perdurar toda la vida.</p>
           </div>
         </div>
+        {/* ----------------Agrega un boton y un parrafo--------------------
         <div className="reading-container">
           <div className="flex flex-col justify-center items-center">
             <Link href="#contact">
@@ -129,29 +131,32 @@ export default function Home() {
             <p className="-ft-2 text-center">{cta.description}</p>
           </div>
         </div>
+        */}
       </section>
+{/*------------------------------------------------------------------ */}
 
       <Blockbuster
         overhead="Atributos"
-        title="¿Por qué capacitar a tu equipo con nosotros?"
-        image={i06}
+        title="Cada joya, una historia irrepetible"
+        image={i05}
+        description="Cada joya que creamos es única.Checa algunas de nuestras piezas más icónicas y encuentra inspo para la tuya."
       />
+{/*------------------------------------------------------------------ */}
       <section className="container my-16">
-        <p className="reading-container">
+        {/* <p className="reading-container">
           Si vas a invertir en formación, asegúrate de que funcione. Aquí te comparto 4 razones para elegirnos.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        </p> */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
-            className="w-full flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl p-12">
+            className="w-full flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl p-12 ">
             <div className="relative md:w-1/3 overflow-hidden">
               <div className="relative w-2/3 pt-[40%] md:pt-[100%] m-auto">
-                <Image src={ico01} layout="fill" className="object-contain"/>
+                <Image src={i06} layout="fill" className="object-contain"/>
               </div>
             </div>
             <div className="w-full">
-              <h3 className="ft-5 font-bold text-brand-1">Expertos en certificaciones internacionales</h3>
-              <p>Capacitación en normas como ISO, FSSC, SQF, BRCGS y más, con alta demanda en sectores
-                industriales</p>
+              <h3 className="ft-5 font-bold text-brand-1">Anillos de compromiso</h3>
+              <p>Diseños únicos para momentos inolvidables</p>
             </div>
           </div>
           <div
@@ -162,7 +167,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full">
-              <h3 className="ft-5 font-bold text-brand-1">Acompañamiento más allá del curso</h3>
+              <h3 className="ft-5 font-bold text-brand-1">Anillos de boda</h3>
               <p>Seguimiento post-curso con grupos de WhatsApp y asesoría anual para reforzar el aprendizaje</p>
             </div>
           </div>
@@ -174,7 +179,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full">
-              <h3 className="ft-5 font-bold text-brand-1">Aprendizaje práctico y efectivo</h3>
+              <h3 className="ft-5 font-bold text-brand-1">Collares y dijes</h3>
               <p>Formato presencial con metodología ADEPT, diseñada para maximizar la retención y aplicación del
                 conocimiento</p>
             </div>
@@ -187,7 +192,7 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full">
-              <h3 className="ft-5 font-bold text-brand-1">Certificaciones que auditores respetan</h3>
+              <h3 className="ft-5 font-bold text-brand-1">Brazaletes y pulseras</h3>
               <p>Capacitación con certificación reconocida y validada en auditorías para garantizar cumplimiento
                 normativo.</p>
             </div>
@@ -202,12 +207,13 @@ export default function Home() {
           <p className="-ft-2 text-center">{cta.description}</p>
         </div>
       </section>
-
+{/*------------------------------------------------------------------ */}
       <Blockbuster
         overhead="Método"
         title="Un método que transforma la forma de aprender: ADEPT"
         image={i07}
       />
+{/*------------------------------------------------------------------ */}
       <section className="px-8 my-16">
         <p className="reading-container">Enseñar normas con diapositivas interminables es cosa del pasado. Nuestra
           metodología ADEPT garantiza que tu equipo aprenda de manera fácil y pueda aplicar lo aprendido en su área de
@@ -272,12 +278,13 @@ export default function Home() {
           <p className="-ft-2 text-center">{cta.description}</p>
         </div>
       </section>
-
+{/*------------------------------------------------------------------ */}
       <Blockbuster
         overhead="Capacitaciones"
         title="Nuestra oferta es ayudarte a certificarte en los siguientes rubros"
         image={i08}
       />
+{/*------------------------------------------------------------------ */}
       <section className="container my-16">
         <div className="container grid grid-cols-1 gap-8">
           <div className="p-12 bg-brand-2 rounded-2xl">
@@ -285,6 +292,7 @@ export default function Home() {
             <p className="-ft-2 text-white">ISO 9001, IATF 16949, ISO 22301, ISO 31000, BRCGS consumer products, BRCGS
               agents and brokers</p>
           </div>
+
           <div className="p-12 bg-brand-2 rounded-2xl">
             <h3 className="ft-2 text-white">Inocuidad</h3>
             <p className="-ft-2 text-white">FSSC 22000, FSSC 22000-Q, ISO 22000, BRCGS food safety, SQF, PCQI –
@@ -292,18 +300,22 @@ export default function Home() {
               distribution, BRCGS audit one, GLOBALG.A.P., HACCP Codex alimentarius, HACCP ISO 22000, GFSI Global
               Markets Programme, Legislación USA para exportación de alimentos (FDA), Normas y leyes en alimentos</p>
           </div>
+
           <div className="p-12 bg-brand-2 rounded-2xl">
             <h3 className="ft-2 text-white">Medio Ambiente</h3>
             <p className="-ft-2 text-white">ISO 14001, ISO 50001, Normas y leyes nacionales en medio ambiente</p>
           </div>
+
           <div className="p-12 bg-brand-2 rounded-2xl">
             <h3 className="ft-2 text-white">Seguridad y Salud Ocupacional</h3>
             <p className="-ft-2 text-white">ISO 45001, Normas y leyes nacionales en seguridad y salud ocupacional</p>
           </div>
+
           <div className="p-12 bg-brand-2 rounded-2xl">
             <h3 className="ft-2 text-white">Tecnologías de la información</h3>
             <p className="-ft-2 text-white">ISO 27001, ISO 25001</p>
           </div>
+
         </div>
 
         <div className="flex flex-col justify-center mt-16 items-center">
@@ -313,12 +325,13 @@ export default function Home() {
           <p className="-ft-2 text-center">{cta.description}</p>
         </div>
       </section>
-
+{/*------------------------------------------------------------------ */}
       <Blockbuster
         overhead="Testimonios"
         title="Empresas que ya confiaron en nosotros"
         image={i09}
       />
+{/*------------------------------------------------------------------ */}
       <section className="my-16">
         <div className="flex flex-col items-center justify-center md:mx-52 mx-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mx-auto">
@@ -392,6 +405,7 @@ export default function Home() {
           <p className="-ft-2 text-center">{cta.description}</p>
         </div>
       </section>
+{/*------------------------------------------------------------------ */}
 
 
       <Blockbuster
@@ -399,6 +413,7 @@ export default function Home() {
         title="Capacitación con respaldo, confianza y resultados"
         image={i10}
       />
+{/*------------------------------------------------------------------ */}
       <section className="py-16">
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-12 bg-brand-1 flex items-center rounded-2xl">
@@ -424,6 +439,7 @@ export default function Home() {
         </div>
 
       </section>
+{/*------------------------------------------------------------------ */}
 
       {/*<Blockbuster*/}
       {/*  overhead="Alianzas"*/}
@@ -456,9 +472,11 @@ export default function Home() {
         title="Si tienes dudas, probablemente estén aquí"
         image={i11}
       />
+{/*------------------------------------------------------------------ */}
       <section className="container py-8">
         <Faqs/>
       </section>
+{/*------------------------------------------------------------------ */}
 
       {/* Contacto  */}
       <section id="contact" className="border-t border-brand-2 py-20">
@@ -478,6 +496,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+{/*------------------------------------------------------------------ */}
     </>
   );
 }

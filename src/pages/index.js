@@ -10,11 +10,16 @@ import i03 from '../../public/landing/003.png';
 import i04 from '../../public/landing/04.png';
 import i05 from '../../public/landing/005.png';
 import i06 from '../../public/landing/006.png';
-import i07 from '../../public/landing/07.png';
-import i08 from '../../public/landing/08.png';
-import i09 from '../../public/landing/09.png';
-import i10 from '../../public/landing/10.png';
-import i11 from '../../public/landing/11.png';
+import i07 from '../../public/landing/007.png';
+import i08 from '../../public/landing/008.png';
+import i09 from '../../public/landing/009.png';
+import i10 from '../../public/landing/010.png';
+import i11 from '../../public/landing/011.png';
+import i12 from '../../public/landing/012.png';
+import i13 from '../../public/landing/013.png';
+import i14 from '../../public/landing/014.png';
+import i15 from '../../public/landing/015.png';
+
 import clientes1 from '../../public/landing/nuestros-clientes-a.jpg';
 import clientes2 from '../../public/landing/nuestros-clientes-b.jpg';
 import clientes3 from '../../public/landing/nuestros-clientes-c.jpg';
@@ -146,129 +151,198 @@ export default function Home() {
         {/* <p className="reading-container">
           Si vas a invertir en formación, asegúrate de que funcione. Aquí te comparto 4 razones para elegirnos.
         </p> */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            className="w-full flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl p-12 ">
-            <div className="relative md:w-1/3 overflow-hidden">
-              <div className="relative w-2/3 pt-[40%] md:pt-[100%] m-auto">
-                <Image src={i06} layout="fill" className="object-contain"/>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <div className="w-full h-[40vh] flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl overflow-hidden">
+            {/* Imagen (mitad izquierda) */}
+            <div className="relative w-full md:w-1/2 h-64 md:h-full">
+              <Image
+                src={i06} // Asegúrate de que `i06` sea una ruta válida
+                layout="fill"
+                objectFit="cover" // Ajusta la imagen para cubrir el contenedor
+                className="rounded-l-3xl" // Opcional: redondea las esquinas izquierdas
+              />
             </div>
-            <div className="w-full">
+
+            {/* Texto (mitad derecha) */}
+            <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
               <h3 className="ft-5 font-bold text-brand-1">Anillos de compromiso</h3>
-              <p>Diseños únicos para momentos inolvidables</p>
-            </div>
-          </div>
-          <div
-            className="w-full flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl p-12">
-            <div className="relative md:w-1/3 overflow-hidden">
-              <div className="relative w-2/3 pt-[40%] md:pt-[100%] m-auto">
-                <Image src={ico02} layout="fill" className="object-contain"/>
-              </div>
-            </div>
-            <div className="w-full">
-              <h3 className="ft-5 font-bold text-brand-1">Anillos de boda</h3>
-              <p>Seguimiento post-curso con grupos de WhatsApp y asesoría anual para reforzar el aprendizaje</p>
-            </div>
-          </div>
-          <div
-            className="w-full flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl p-12">
-            <div className="relative md:w-1/3 overflow-hidden">
-              <div className="relative w-2/3 pt-[40%] md:pt-[100%] m-auto">
-                <Image src={ico03} layout="fill" className="object-contain"/>
-              </div>
-            </div>
-            <div className="w-full">
-              <h3 className="ft-5 font-bold text-brand-1">Collares y dijes</h3>
-              <p>Formato presencial con metodología ADEPT, diseñada para maximizar la retención y aplicación del
-                conocimiento</p>
-            </div>
-          </div>
-          <div
-            className="w-full flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl p-12">
-            <div className="relative md:w-1/3 overflow-hidden">
-              <div className="relative w-2/3 pt-[40%] md:pt-[100%] m-auto">
-                <Image src={ico04} layout="fill" className="object-contain"/>
-              </div>
-            </div>
-            <div className="w-full">
-              <h3 className="ft-5 font-bold text-brand-1">Brazaletes y pulseras</h3>
-              <p>Capacitación con certificación reconocida y validada en auditorías para garantizar cumplimiento
-                normativo.</p>
+              <p className="text-gray-600 text-justify">Diseños únicos para momentos inolvidables</p>
             </div>
           </div>
 
+          <div className="w-full h-[40vh] flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl overflow-hidden">
+            {/* Imagen (mitad izquierda) */}
+            <div className="relative w-full md:w-1/2 h-64 md:h-full">
+              <Image
+                src={i07} // Asegúrate de que `i06` sea una ruta válida
+                layout="fill"
+                objectFit="cover" // Ajusta la imagen para cubrir el contenedor
+                className="rounded-l-3xl" // Opcional: redondea las esquinas izquierdas
+              />
+            </div>
+
+            {/* Texto (mitad derecha) */}
+            <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
+              <h3 className="ft-5 font-bold text-brand-1">Anillos de boda</h3>
+              <p className="text-gray-600 text-justify">Alianzas personalizadas con significado eterno</p>
+            </div>
+          </div>
+
+          <div className="w-full h-[40vh] flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl overflow-hidden">
+            {/* Imagen (mitad izquierda) */}
+            <div className="relative w-full md:w-1/2 h-64 md:h-full">
+              <Image
+                src={i08} // Asegúrate de que `i06` sea una ruta válida
+                layout="fill"
+                objectFit="cover" // Ajusta la imagen para cubrir el contenedor
+                className="rounded-l-3xl" // Opcional: redondea las esquinas izquierdas
+              />
+            </div>
+
+            {/* Texto (mitad derecha) */}
+            <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
+              <h3 className="ft-5 font-bold text-brand-1">Collares y dijes
+              </h3>
+              <p className="text-gray-600 text-justify">Piezas que expresan estilo
+              y sofisticación</p>
+            </div>
+          </div>
+
+          <div className="w-full h-[40vh] flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl overflow-hidden">
+            {/* Imagen (mitad izquierda) */}
+            <div className="relative w-full md:w-1/2 h-64 md:h-full">
+              <Image
+                src={i09} // Asegúrate de que `i06` sea una ruta válida
+                layout="fill"
+                objectFit="cover" // Ajusta la imagen para cubrir el contenedor
+                className="rounded-l-3xl" // Opcional: redondea las esquinas izquierdas
+              />
+            </div>
+
+            {/* Texto (mitad derecha) */}
+            <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
+              <h3 className="ft-5 font-bold text-brand-1">Brazaletes y pulseras</h3>
+              <p className="text-gray-600 text-justify">Joyería que te acompaña todos
+              los días</p>
+            </div>
+          </div>
+
+          <div className="w-full h-[40vh] flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl overflow-hidden">
+            {/* Imagen (mitad izquierda) */}
+            <div className="relative w-full md:w-1/2 h-64 md:h-full">
+              <Image
+                src={i10} // Asegúrate de que `i06` sea una ruta válida
+                layout="fill"
+                objectFit="cover" // Ajusta la imagen para cubrir el contenedor
+                className="rounded-l-3xl" // Opcional: redondea las esquinas izquierdas
+              />
+            </div>
+
+            {/* Texto (mitad derecha) */}
+            <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
+              <h3 className="ft-5 font-bold text-brand-1">Aretes</h3>
+              <p className="text-gray-600 text-justify">Detalles perfectos con            el brillo idea</p>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-col justify-center mt-16 items-center">
+        {/* AGrega un boton y un parrafo */}
+        
+        {/* <div className="flex flex-col justify-center mt-16 items-center">
           <Link href="#contact">
             <a onClick={() => setLastClick('specs')} className="button mb-4">{cta.main}</a>
           </Link>
           <p className="-ft-2 text-center">{cta.description}</p>
-        </div>
+        </div> */}
       </section>
 {/*------------------------------------------------------------------ */}
       <Blockbuster
-        overhead="Método"
-        title="Un método que transforma la forma de aprender: ADEPT"
-        image={i07}
+        overhead="Beneficios"
+        title="Un diseño que nadie más tendrá, creado solo para ti."
+        image={i11}
       />
 {/*------------------------------------------------------------------ */}
       <section className="px-8 my-16">
-        <p className="reading-container">Enseñar normas con diapositivas interminables es cosa del pasado. Nuestra
+        {/* <p className="reading-container">Enseñar normas con diapositivas interminables es cosa del pasado. Nuestra
           metodología ADEPT garantiza que tu equipo aprenda de manera fácil y pueda aplicar lo aprendido en su área de
-          trabajo.</p>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+          trabajo.</p> */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="w-full gap-8 items-stretch p-12">
             <div
-              className="relative flex items-center justify-center w-[16rem] h-[16rem] m-auto p-16 mb-12 bg-brand-1 rounded-full">
-              <p className="absolute top-12 font-bold text-white" style={{fontSize: '7rem !important'}}>A</p>
+              className="relative flex items-center justify-center h-[45vh] m-auto p-16 mb-6 rounded-full">
+              
+              <Image
+                src={i12} // Asegúrate de que `i06` sea una ruta válida
+                layout="fill"
+                objectFit="cover" // Ajusta la imagen para cubrir el contenedor
+                className="rounded-t-3xl" // Opcional: redondea las esquinas izquierdas
+              />
+
             </div>
             <div className="w-full text-center">
-              <h3 className="ft-5 font-bold text-brand-1">Adaptabilidad</h3>
-              <p>Capacitación en normas como ISO, FSSC, SQF, BRCGS y más, con alta demanda en sectores industriales</p>
+              <h3 className="ft-5 font-bold text-brand-1">Diseño único e irrepetible</h3>
+              <p>Cada joya es creada solo una vez, nadie más la tendrá industriales.</p>
             </div>
           </div>
+
           <div className="w-full gap-8 items-stretch p-12">
             <div
-              className="relative flex items-center justify-center w-[16rem] h-[16rem] m-auto p-16 mb-12 bg-brand-1 rounded-full">
-              <p className="absolute top-12 font-bold text-white" style={{fontSize: '7rem !important'}}>D</p>
+              className="relative flex items-center justify-center h-[45vh] m-auto p-16 mb-6 rounded-full">
+              
+              <Image
+                src={i13} // Asegúrate de que `i06` sea una ruta válida
+                layout="fill"
+                objectFit="cover" // Ajusta la imagen para cubrir el contenedor
+                className="rounded-t-3xl" // Opcional: redondea las esquinas izquierdas
+              />
+
             </div>
             <div className="w-full text-center">
-              <h3 className="ft-5 font-bold text-brand-1">Dinámica</h3>
-              <p>Aprender no es leer diapositivas. Usamos actividades prácticas para reforzar el conocimiento</p>
+              <h3 className="ft-5 font-bold text-brand-1">Materiales certificados</h3>
+              <p>Oro de 18K, plata y piedras preciosas con certificación GIA.</p>
             </div>
           </div>
+
+
           <div className="w-full gap-8 items-stretch p-12">
             <div
-              className="relative flex items-center justify-center w-[16rem] h-[16rem] m-auto p-16 mb-12 bg-brand-1 rounded-full">
-              <p className="absolute top-12 font-bold text-white" style={{fontSize: '7rem !important'}}>E</p>
+              className="relative flex items-center justify-center h-[45vh] m-auto p-16 mb-6 rounded-full">
+              
+              <Image
+                src={i14} // Asegúrate de que `i06` sea una ruta válida
+                layout="fill"
+                objectFit="cover" // Ajusta la imagen para cubrir el contenedor
+                className="rounded-t-3xl" // Opcional: redondea las esquinas izquierdas
+              />
+
             </div>
             <div className="w-full text-center">
-              <h3 className="ft-5 font-bold text-brand-1">Eficiencia</h3>
-              <p>Máximo aprendizaje en el menor tiempo posible, sin afectar la operación diaria</p>
+              <h3 className="ft-5 font-bold text-brand-1">Proceso de visualización </h3>
+              <p>Bocetos y renders 3D para perfeccionar el diseño antes de fabricarlo.</p>
             </div>
           </div>
+
           <div className="w-full gap-8 items-stretch p-12">
             <div
-              className="relative flex items-center justify-center w-[16rem] h-[16rem] m-auto p-16 mb-12 bg-brand-1 rounded-full">
-              <p className="absolute top-12 font-bold text-white" style={{fontSize: '7rem !important'}}>P</p>
+              className="relative flex items-center justify-center h-[45vh] m-auto p-16 mb-6 rounded-full">
+              
+              <Image
+                src={i15} // Asegúrate de que `i06` sea una ruta válida
+                layout="fill"
+                objectFit="cover" // Ajusta la imagen para cubrir el contenedor
+                className="rounded-t-3xl" // Opcional: redondea las esquinas izquierdas
+              />
+
             </div>
             <div className="w-full text-center">
-              <h3 className="ft-5 font-bold text-brand-1">Práctica</h3>
-              <p>Menos teoría, más acción: ejercicios, simulaciones y casos reales</p>
+              <h3 className="ft-5 font-bold text-brand-1">Garantía y servicio post-venta</h3>
+              <p>Mantenimiento, limpieza y ajustes sin costo adicional.</p>
             </div>
           </div>
-          <div className="w-full gap-8 items-stretch p-12">
-            <div
-              className="relative flex items-center justify-center w-[16rem] h-[16rem] m-auto p-16 mb-12 bg-brand-1 rounded-full">
-              <p className="absolute top-12 font-bold text-white" style={{fontSize: '7rem !important'}}>T</p>
-            </div>
-            <div className="w-full text-center">
-              <h3 className="ft-5 font-bold text-brand-1">Transformación</h3>
-              <p>No solo capacitamos, cambiamos la mentalidad y desempeño de tu equipo</p>
-            </div>
-          </div>
+
+
+
         </div>
 
         <div className="flex flex-col justify-center mt-16 items-center">

@@ -19,6 +19,8 @@ import i12 from '../../public/landing/012.png';
 import i13 from '../../public/landing/013.png';
 import i14 from '../../public/landing/014.png';
 import i15 from '../../public/landing/015.png';
+import i16 from '../../public/landing/016.png';
+import i17 from '../../public/landing/017.png';
 
 import clientes1 from '../../public/landing/nuestros-clientes-a.jpg';
 import clientes2 from '../../public/landing/nuestros-clientes-b.jpg';
@@ -353,13 +355,13 @@ export default function Home() {
         </div>
       </section>
 {/*------------------------------------------------------------------ */}
-      <Blockbuster
-        overhead="Capacitaciones"
-        title="Nuestra oferta es ayudarte a certificarte en los siguientes rubros"
-        image={i08}
-      />
+      {/* <Blockbuster
+        overhead="TESTIMONIOS"
+        title="Historias que brillan tanto como nuestras joyas."
+        image={i16}
+      /> */}
 {/*------------------------------------------------------------------ */}
-      <section className="container my-16">
+      {/* <section className="container my-16">
         <div className="container grid grid-cols-1 gap-8">
           <div className="p-12 bg-brand-2 rounded-2xl">
             <h3 className="ft-2 text-white">Calidad</h3>
@@ -398,12 +400,12 @@ export default function Home() {
           </Link>
           <p className="-ft-2 text-center">{cta.description}</p>
         </div>
-      </section>
+      </section> */}
 {/*------------------------------------------------------------------ */}
       <Blockbuster
         overhead="Testimonios"
-        title="Empresas que ya confiaron en nosotros"
-        image={i09}
+        title="Historias que brillan tanto como nuestras joyas."
+        image={i16}
       />
 {/*------------------------------------------------------------------ */}
       <section className="my-16">
@@ -415,12 +417,17 @@ export default function Home() {
                   <div className="material-icons ft-11">format_quote</div>
                 </div>
                 <p className="ft-2 text-white">
-                  Hemos probado varias capacitaciones antes, pero esta es la única donde el equipo realmente aplicó lo
-                  aprendido. Estamos muy satisfechos con el resultado.
+                No quería un anillo cualquiera,
+                quería algo con historia. Giove
+                hizo posible un diseño que
+                representa nuestro amor de una
+                manera única. Ver la emoción
+                de mi novia al recibirlo no tuvo
+                precio.
                 </p>
                 <div className="mt-auto">
-                  <p className="ft-4 serif font-semibold text-white">Luis M.</p>
-                  <p className="serif font-semibold text-brand-4">Director de Cumplimiento</p>
+                  <p className="ft-4 serif font-semibold text-white">EDUARDO M.</p>
+                  {/* <p className="serif font-semibold text-brand-4">Director de Cumplimiento</p> */}
                 </div>
               </div>
             </div>
@@ -430,12 +437,18 @@ export default function Home() {
                   <div className="material-icons ft-11">format_quote</div>
                 </div>
                 <p className="ft-2 text-white">
-                  Nuestro equipo pudo certificarse en la ISO 9001 sin estrés después de la capacitación con BH
-                  Consulting. La metodología que utilizan hizo toda la diferencia, gracias por todo!
+                Hacer este collar de la mano
+                del equipo de Giove, es la
+                mejor decisión que he tomado.
+                Desde los bocetos entendieron
+                lo que quería, esta pieza tiene
+                mucho significado para mi y
+                quedó perfecta.
+
                 </p>
                 <div className="mt-auto">
-                  <p className="ft-4 serif font-semibold text-white">María G.</p>
-                  <p className="serif font-semibold text-brand-4">Gerente de Calidad</p>
+                  <p className="ft-4 serif font-semibold text-white">PAOLA G.</p>
+                  {/* <p className="serif font-semibold text-brand-4">Gerente de Calidad</p> */}
                 </div>
               </div>
             </div>
@@ -445,11 +458,16 @@ export default function Home() {
                   <div className="material-icons ft-11">format_quote</div>
                 </div>
                 <p className="ft-2 text-white">
-                  Nos ahorramos tiempo, dinero y dolores de cabeza. Capacitar al equipo con BH fue la mejor decisión.
+                Queríamos que los anillos de
+                nuestra boda fueran únicos
+                y una amiga nos recomendó
+                Giove. Todo estuvo perfecto,
+                desde la primera sesión hasta la
+                entrega de nuestros anillos.
                 </p>
                 <div className="mt-auto">
-                  <p className="ft-4 serif font-semibold text-white">Ricardo P.</p>
-                  <p className="serif font-semibold text-brand-4">Responsable de Seguridad Alimentaria</p>
+                  <p className="ft-4 serif font-semibold text-white">ALEJANDRO T.</p>
+                  {/* <p className="serif font-semibold text-brand-4">Responsable de Seguridad Alimentaria</p> */}
                 </div>
               </div>
             </div>
@@ -542,9 +560,9 @@ export default function Home() {
       {/*</section>*/}
 
       <Blockbuster
-        overhead="Preguntas frecuentes"
-        title="Si tienes dudas, probablemente estén aquí"
-        image={i11}
+        overhead="FAQs"
+        title="Todo lo que necesitas saber para crear tu joya perfecta."
+        image={i17}
       />
 {/*------------------------------------------------------------------ */}
       <section className="container py-8">

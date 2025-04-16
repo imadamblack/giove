@@ -5,24 +5,24 @@ export default function Faqs() {
 
   const questions = [
     {
-      q: "¿Qué certificaciones cubren?",
-      a: "ISO, FSSC, SQF, BRCGS y más. Pregunta por tu sector y te confirmamos."
+      q: "¿Cómo sé que mi joya será única?",
+      a: "Cada diseño es exclusivo y no se replica para ningún otro cliente."
     },
     {
-      q: "¿Cómo adaptan la capacitación a mi empresa?",
-      a: "Analizamos tus necesidades y ajustamos el contenido para que sea 100% relevante para tu operación."
+      q: "¿Cómo puedo estar seguro de la autenticidad de los materiales?",
+      a: "Todas las piedras y metales tienen certificaciones oficiales de calidad."
     },
     {
-      q: "¿El curso es solo presencial?",
-      a: "Por el momento sí, buscamos dar la mejor atención a cada uno de nuestros clientes."
+      q: "¿Qué pasa si quiero hacer cambios en el diseño?",
+      a: "Antes de la fabricación, puedes solicitar ajustes en los renders 3D."
     },
     {
-      q: "¿Pueden capacitar a varios equipos en la empresa?",
-      a: "Claro. Tenemos opciones para grupos pequeños, medianos y corporativos."
+      q: "¿Cuánto tiempo tarda la creación de mi joya?",
+      a: "El proceso puede tomar entre 4 y 8 semanas, dependiendo de la complejidad del diseño."
     },
     {
-      q: "¿Cuál es el costo aproximado por la capacitación?",
-      a: "Varía entre los $8,000 a los $15,000 MXN. Depende completamente del tipo de certificación."
+      q: "¿Qué garantías tengo sobre mi compra?",
+      a: "Giove ofrece garantía de autenticidad, servicio post-venta y la seguridad de trabajar con expertos."
     }
   ];
 

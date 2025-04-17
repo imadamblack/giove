@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { info } from '../../../info';
 import Image from 'next/image';
-import logo from '../../../public/logo.png';
+import logo from '../../../public/logo_blanco.png';
 
 export default function Header() {
   return (
@@ -12,7 +12,11 @@ export default function Header() {
       <div className="flex items-center z-[1]">
         <div className="relative flex items-center h-[8rem] w-[24rem]">
           <Link href="/" passhref>
-            <a><Image src={logo} alt={info.companyName} layout="fill" objectFit="contain"/></a>
+            <a ><Image 
+                  src={logo} 
+                  alt={info.companyName} 
+                  layout="fill" 
+                  objectFit="contain"/></a>
           </Link>
         </div>
       </div>

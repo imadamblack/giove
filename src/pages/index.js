@@ -578,8 +578,7 @@ export default function Home() {
             Agenda una consulta gratuita con nuestro equipo y comencemos el proceso de creación.
             </h2>
             <p className="ft-1 my-8">
-              Déjanos tus datos para programar una consultoría gratuita sobre las necesidades de capacitación de tu
-              negocio.
+            Déjanos tus datos y programa una consultoría gratuita para descubrir cómo podemos ayudarte a diseñar piezas únicas en oro y diamantes que reflejen elegancia y exclusividad.
             </p>
 
             <OptInForm

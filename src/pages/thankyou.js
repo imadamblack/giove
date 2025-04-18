@@ -8,10 +8,10 @@ export default function ThankYou() {
           ¡Gracias por registrarte!
         </h2>
         <p className="ft-4 text-center">
-          Muy pronto, uno de nuestros asesores se pondrá en contacto contigo para darte más info sobre nuestras capacitaciones.
+          Muy pronto, uno de nuestros Diseñadores se pondrá en contacto contigo para darte más info sobre nuestras obras.
         </p>
         <p className="text-center ft-2">
-          Si no se abrió nuestro calendario para agendar tu diagnóstico
+          Si no se abrió nuestro calendario para agendar tu muestra de piezas
         </p>
         <div className="flex flex-col items-center justify-center gap-10">
           <a

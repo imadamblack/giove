@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-/bh-consulting-main
+
 
 # testing
 /coverage
@@ -37,3 +37,7 @@ yarn-error.log*
 
 # secrets
 /secrets.json
+
+
+#backup
+/bh-consulting-main

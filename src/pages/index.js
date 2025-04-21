@@ -4,7 +4,7 @@ import Link from 'next/link';
 import OptInForm from '../components/form/opt-in-form';
 import { useEffect, useState } from 'react';
 import scrollDepth from '../utils/scrollDepth';
-import i01 from '../../public/landing/001.png';
+import i01 from '../../public/landing/001-v2.png';
 import i02 from '../../public/landing/002.png';
 import i03 from '../../public/landing/003.png';
 import i04 from '../../public/landing/04.png';
@@ -57,7 +57,7 @@ export default function Home() {
         <div className="relative min-h-[24rem] flex-grow w-full md:absolute top-0 inset-x-0 bottom-1/2 md:bottom-0">
           <div
             className="w-full h-[24rem] md:h-[60rem] bottom-0 absolute bg-gradient-to-t from-brand-1 md:from-brand-2 via-transparent md:via-brand-1 to-transparent md:opacity-60 z-10"/>
-          <Image src={i01} layout="fill" className="object-cover object-right"/>
+          <Image src={i01} layout="fill" className="object-cover object-center sm:object-[75%_50%] md:object-center"/>
         </div>
 
         <div className="container mt-auto w-full text-center z-50 p-8">
@@ -67,7 +67,7 @@ export default function Home() {
           </h1>
           {/*<p className="ft-3 mt-4 mb-0 text-white">Consultoría y capacitación especializada en normas y
             certificaciones internacionales</p>*/}
-          <div className="flex flex-col justify-center items-center mt-12 md:text-white">
+          <div className="flex flex-col justify-center items-center mt-12 text-white">
             {/*<Link href="#contact">*/}
             {/*  <a onClick={() => setLastClick('hero')} className="button mb-4">{cta.main}</a>*/}
             {/*</Link>*/}
@@ -105,28 +105,28 @@ export default function Home() {
             <div className="relative h-[24rem] overflow-hidden flex items-center order-2 md:order-1 mb-8">
               <Image src={ico01} className="object-cover"/>
             </div>
-            <p className="order-3 text-justify">En una sesión privada, descubrimos la inspiración detrás de tu joya.</p>
+            <p className="order-3 text-left">En una sesión privada, descubrimos la inspiración detrás de tu joya.</p>
           </div>
           <div className="flex flex-col justify-center items-center">
             <h3 className="order-1 md:order-2 mb-8 text-brand-1 font-bold">Diseñamos tu pieza</h3>
             <div className="relative h-[24rem] overflow-hidden flex items-center order-2 md:order-1 mb-8">
               <Image src={ico02} className="object-cover"/>
             </div>
-            <p className="order-3 text-justify">Desde bocetos hasta renders 3D, perfeccionamos cada detalle.</p>
+            <p className="order-3 text-left">Desde bocetos hasta renders 3D, perfeccionamos cada detalle.</p>
           </div>
           <div className="flex flex-col justify-center items-center">
             <h3 className="order-1 md:order-2 mb-8 text-brand-1 font-bold">Fabricación artesanal</h3>
             <div className="relative h-[24rem] overflow-hidden flex items-center order-2 md:order-1 mb-8">
               <Image src={ico03} className="object-cover"/>
             </div>
-            <p className="order-3 text-justify">Maestros joyeros elaboran tu pieza con los mejores materiales.</p>
+            <p className="order-3 text-left">Maestros joyeros elaboran tu pieza con los mejores materiales.</p>
           </div>
           <div className="flex flex-col justify-center items-center">
             <h3 className="order-1 md:order-2 mb-8 text-brand-1 font-bold">Entrega con distinción</h3>
             <div className="relative h-[24rem] overflow-hidden flex items-center order-2 md:order-1 mb-8">
               <Image src={ico04} className="object-cover"/>
             </div>
-            <p className="order-3 text-justify">Recibes tu joya en un empaque de lujo, lista para perdurar toda la vida.</p>
+            <p className="order-3 text-left">Recibes tu joya en un empaque de lujo, lista para perdurar toda la vida.</p>
           </div>
         </div>
         {/* ----------------Agrega un boton y un parrafo--------------------
@@ -146,8 +146,16 @@ export default function Home() {
         overhead="Atributos"
         title="Cada joya, una historia irrepetible"
         image={i05}
-        description="Cada joya que creamos es única.Checa algunas de nuestras piezas más icónicas y encuentra inspo para la tuya."
       />
+
+<section className="container grid grid-cols-1 my-16">
+       
+        <div className="reading-container flex items-center justify-center">
+          <p className="ft-2 ">
+          Cada joya que creamos es única. Checa algunas de nuestras piezas más icónicas y encuentra inspo para la tuya.
+          </p>
+        </div>
+      </section>
 {/*------------------------------------------------------------------ */}
       <section className="container my-16">
         {/* <p className="reading-container">
@@ -155,7 +163,7 @@ export default function Home() {
         </p> */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
-          <div className="w-full h-[40vh] flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl overflow-hidden">
+          <div className="w-full h-[40vh] flex flex-col md:flex-row gap-8 items-stretch border-2 border-brand-1 rounded-3xl overflow-hidden md:col-span-2">
             {/* Imagen (mitad izquierda) */}
             <div className="relative w-full md:w-1/2 h-64 md:h-full">
               <Image
@@ -169,7 +177,7 @@ export default function Home() {
             {/* Texto (mitad derecha) */}
             <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
               <h3 className="ft-5 font-bold text-brand-1">Anillos de compromiso</h3>
-              <p className="text-gray-600 text-justify">Diseños únicos para momentos inolvidables</p>
+              <p className="text-gray-600 text-left">Diseños únicos para momentos inolvidables</p>
             </div>
           </div>
 
@@ -187,7 +195,7 @@ export default function Home() {
             {/* Texto (mitad derecha) */}
             <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
               <h3 className="ft-5 font-bold text-brand-1">Anillos de boda</h3>
-              <p className="text-gray-600 text-justify">Alianzas personalizadas con significado eterno</p>
+              <p className="text-gray-600 text-left">Alianzas personalizadas con significado eterno</p>
             </div>
           </div>
 
@@ -206,7 +214,7 @@ export default function Home() {
             <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
               <h3 className="ft-5 font-bold text-brand-1">Collares y dijes
               </h3>
-              <p className="text-gray-600 text-justify">Piezas que expresan estilo
+              <p className="text-gray-600 text-left">Piezas que expresan estilo
               y sofisticación</p>
             </div>
           </div>
@@ -225,7 +233,7 @@ export default function Home() {
             {/* Texto (mitad derecha) */}
             <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
               <h3 className="ft-5 font-bold text-brand-1">Brazaletes y pulseras</h3>
-              <p className="text-gray-600 text-justify">Joyería que te acompaña todos
+              <p className="text-gray-600 text-left">Joyería que te acompaña todos
               los días</p>
             </div>
           </div>
@@ -244,7 +252,7 @@ export default function Home() {
             {/* Texto (mitad derecha) */}
             <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
               <h3 className="ft-5 font-bold text-brand-1">Aretes</h3>
-              <p className="text-gray-600 text-justify">Detalles perfectos con            el brillo idea</p>
+              <p className="text-gray-600 text-left">Detalles perfectos con el brillo idea</p>
             </div>
           </div>
         </div>
@@ -269,8 +277,8 @@ export default function Home() {
         {/* <p className="reading-container">Enseñar normas con diapositivas interminables es cosa del pasado. Nuestra
           metodología ADEPT garantiza que tu equipo aprenda de manera fácil y pueda aplicar lo aprendido en su área de
           trabajo.</p> */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="w-full gap-8 items-stretch p-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-32">
+          <div className="w-full gap-8 items-stretch  border-2 border-brand-1 rounded-3xl overflow-hidden">
             <div
               className="relative flex items-center justify-center h-[45vh] m-auto p-16 mb-6 rounded-full">
               
@@ -278,17 +286,17 @@ export default function Home() {
                 src={i12} // Asegúrate de que `i06` sea una ruta válida
                 layout="fill"
                 objectFit="cover" // Ajusta la imagen para cubrir el contenedor
-                className="rounded-t-3xl" // Opcional: redondea las esquinas izquierdas
+                className="" // Opcional: redondea las esquinas izquierdas
               />
 
             </div>
-            <div className="w-full text-center">
+            <div className="w-full text-center p-2">
               <h3 className="ft-5 font-bold text-brand-1">Diseño único e irrepetible</h3>
               <p>Cada joya es creada solo una vez, nadie más la tendrá industriales.</p>
             </div>
           </div>
 
-          <div className="w-full gap-8 items-stretch p-12">
+          <div className="w-full gap-8 items-stretch  border-2 border-brand-1 rounded-3xl overflow-hidden">
             <div
               className="relative flex items-center justify-center h-[45vh] m-auto p-16 mb-6 rounded-full">
               
@@ -300,14 +308,14 @@ export default function Home() {
               />
 
             </div>
-            <div className="w-full text-center">
+            <div className="w-full text-center p-2">
               <h3 className="ft-5 font-bold text-brand-1">Materiales certificados</h3>
               <p>Oro de 18K, plata y piedras preciosas con certificación GIA.</p>
             </div>
           </div>
 
 
-          <div className="w-full gap-8 items-stretch p-12">
+          <div className="w-full gap-8 items-stretch  border-2 border-brand-1 rounded-3xl overflow-hidden">
             <div
               className="relative flex items-center justify-center h-[45vh] m-auto p-16 mb-6 rounded-full">
               
@@ -319,13 +327,13 @@ export default function Home() {
               />
 
             </div>
-            <div className="w-full text-center">
+            <div className="w-full text-center p-2">
               <h3 className="ft-5 font-bold text-brand-1">Proceso de visualización </h3>
               <p>Bocetos y renders 3D para perfeccionar el diseño antes de fabricarlo.</p>
             </div>
           </div>
 
-          <div className="w-full gap-8 items-stretch p-12">
+          <div className="w-full gap-8 items-stretch  border-2 border-brand-1 rounded-3xl overflow-hidden">
             <div
               className="relative flex items-center justify-center h-[45vh] m-auto p-16 mb-6 rounded-full">
               
@@ -337,7 +345,7 @@ export default function Home() {
               />
 
             </div>
-            <div className="w-full text-center">
+            <div className="w-full text-center p-2">
               <h3 className="ft-5 font-bold text-brand-1">Garantía y servicio post-venta</h3>
               <p>Mantenimiento, limpieza y ajustes sin costo adicional.</p>
             </div>
@@ -577,8 +585,8 @@ export default function Home() {
             <h2 className="text-brand-1">
             Agenda una consulta gratuita con nuestro equipo y comencemos el proceso de creación.
             </h2>
-            <p className="ft-1 my-8">
-            Déjanos tus datos y programa una consultoría gratuita para descubrir cómo podemos ayudarte a diseñar piezas únicas en oro y diamantes que reflejen elegancia y exclusividad.
+            <p className="ft-1 my-8 sm:text-left">
+            Agenda una cita para comenzar a diseñar tus piezas, Si ya llegaste hasta acá, compártenos unos datos y diseñemos tus piezas
             </p>
 
             <OptInForm

@@ -422,7 +422,7 @@ export default function Home() {
             <div className="w-full flex flex-col bg-brand-2 rounded-2xl overflow-hidden">
               <div className="flex flex-col gap-10 px-20 py-16 flex-grow">
                 <div className="relative w-full flex justify-start text-brand-4">
-                  <div className="material-icons ft-11">format_quote</div>
+                  <div className="material-icons ft-11 text-white">format_quote</div>
                 </div>
                 <p className="ft-2 text-white">
                 No quería un anillo cualquiera,
@@ -442,7 +442,7 @@ export default function Home() {
             <div className="w-full flex flex-col bg-brand-2 rounded-2xl overflow-hidden">
               <div className="flex flex-col gap-10 px-20 py-16 flex-grow">
                 <div className="relative w-full flex justify-start text-brand-4">
-                  <div className="material-icons ft-11">format_quote</div>
+                  <div className="material-icons ft-11 text-white">format_quote</div>
                 </div>
                 <p className="ft-2 text-white">
                 Hacer este collar de la mano
@@ -463,7 +463,7 @@ export default function Home() {
             <div className="w-full flex flex-col bg-brand-2 rounded-2xl overflow-hidden">
               <div className="flex flex-col gap-10 px-20 py-16 flex-grow">
                 <div className="relative w-full flex justify-start text-brand-4">
-                  <div className="material-icons ft-11">format_quote</div>
+                  <div className="material-icons ft-11 text-white">format_quote</div>
                 </div>
                 <p className="ft-2 text-white">
                 Queríamos que los anillos de

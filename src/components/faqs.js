@@ -27,7 +27,7 @@ export default function Faqs() {
   ];
 
   return (
-    <section className='bg-gray-100 py-12'>
+    <section className='py-12'>
       <div className='container'>
         {questions.map((q, i) =>
           <div key={`faq-${i}`} className="w-full shadow-sm mb-2">
@@ -38,7 +38,7 @@ export default function Faqs() {
             >
               <span className="font-bold mr-4 text-brand-1">›</span>{q.q}
             </p>
-            <p className={`${faqOpen == i ? 'flex' : 'hidden'} bg-gray-200 p-12`}>
+            <p className={`${faqOpen == i ? 'flex' : 'hidden'} bg-gray-50 p-12`}>
               {q.a}
             </p>
           </div>

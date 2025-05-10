@@ -15,6 +15,9 @@ import i02 from '../../public/landing/002.png';
 import i03 from '../../public/landing/003.png';
 import i04 from '../../public/landing/012.png';
 import i05 from '../../public/landing/006.png';
+import paola from '../../public/landing/paola.png'
+import eduardo from '../../public/landing/eduardo.png'
+import alejandro from '../../public/landing/alejandro.png'
 
 
 const formSteps = [
@@ -103,7 +106,7 @@ const formSteps = [
           <div className="flex gap-8 p-8 border">
             <div className="flex flex-col justify-center items-center w-1/4">
               <div className="relative w-full pt-[100%] rounded-full overflow-hidden mb-4">
-                <Image src={i02} layout="fill" objectFit="contain"/>
+                <Image src={eduardo} layout="fill" objectFit="cover" objectPosition="top"/>
               </div>
               <p className="-ft-2">Eduardo M.</p>
             </div>
@@ -117,7 +120,7 @@ const formSteps = [
           <div className="flex gap-8 p-8 border">
             <div className="flex flex-col justify-center items-center w-1/4">
               <div className="relative w-full pt-[100%] rounded-full overflow-hidden mb-4">
-                <Image src={i02} layout="fill" objectFit="contain"/>
+                <Image src={paola} layout="fill" objectFit="cover"/>
               </div>
               <p className="-ft-2">Paola G.</p>
             </div>
@@ -131,7 +134,7 @@ const formSteps = [
           <div className="flex gap-8 p-8 border">
             <div className="flex flex-col justify-center items-center w-1/4">
               <div className="relative w-full pt-[100%] rounded-full overflow-hidden mb-4">
-                <Image src={i02} layout="fill" objectFit="contain"/>
+                <Image src={alejandro} layout="fill" objectFit="contain"/>
               </div>
               <p className="-ft-2">Alejandro T.</p>
             </div>

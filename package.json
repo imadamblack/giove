@@ -13,6 +13,7 @@
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "cookies-next": "^2.1.1",
+    "framer-motion": "^12.10.5",
     "googleapis": "^105.0.0",
     "next": "12.2.4",
     "react": "18.2.0",

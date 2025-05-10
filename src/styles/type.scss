@@ -57,11 +57,10 @@ h5 { @extend .ft-2; }
 h6 { @extend .ft-1; }
 p { @extend .ft-0; }
 li { @extend .ft-0; }
-label { @extend .-ft-3; }
+label { @extend .ft-0; font-family: "Inter", sans-serif }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "marlide-display-variable", sans-serif;
-  color: #4a5568; /* Equivalente a text-gray-700 */
   letter-spacing: normal; /* Equivalente a tracking-normal */
   margin-block-start: 0;
 }
@@ -76,7 +75,6 @@ h4, h5, h6 {
 
 p, li {
   font-family: "optima-lt-pro", sans-serif;
-  letter-spacing: 0.05em; /* Equivalente a tracking-wide */
   margin-block-start: 0;
 }
 

@@ -3,12 +3,18 @@ import { info } from '../../../info';
 import Header from './header';
 import Footer from './footer';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router'
 
 export default function Layout({children}) {
-    useEffect(() => {
+  useEffect(() => {
     const mainHeader = document.getElementsByTagName('header')[0];
     document.querySelector('html').style.scrollPaddingTop = mainHeader.offsetHeight + 'px';
+    document.querySelector('main').style.paddingTop = mainHeader.offsetHeight + 'px';
+    document.querySelector('main').style.scrollMarginTop = mainHeader.offsetHeight + 'px';
   }, []);
+  const router = useRouter()
+  const pathname = router.pathname
+  console.log(pathname);
 
   return (
     <>
@@ -18,9 +24,9 @@ export default function Layout({children}) {
       </Head>
       <Header/>
 
-      <main className="flex-grow">{children}</main>
+      <main className={`flex-grow`}>{children}</main>
 
-      <Footer/>
+      {pathname !== '/survey' && <Footer/>}
     </>
   );
 }

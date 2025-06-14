@@ -7,7 +7,7 @@ import scrollDepth from '../utils/scrollDepth';
 import i01 from '../../public/survey/01.png';
 import i02 from '../../public/landing/002.png';
 import i03 from '../../public/landing/003.png';
-import i17 from '../../public/landing/017.png';
+import i17 from '../../public/landing/017.jpg';
 import aretes from '../../public/landing/aretes.png';
 import bodas from '../../public/landing/bodas.png';
 import compromiso from '../../public/landing/compromiso.png';

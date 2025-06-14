@@ -13,9 +13,9 @@ import bodas from '../../public/landing/bodas.png';
 import compromiso from '../../public/landing/compromiso.png';
 import collar from '../../public/landing/collar.png';
 import pulsera from '../../public/landing/pulsera.png';
-import paola from '../../public/landing/paola.png'
-import eduardo from '../../public/landing/eduardo.png'
-import alejandro from '../../public/landing/alejandro.png'
+import paola from '../../public/landing/paola.png';
+import eduardo from '../../public/landing/eduardo.png';
+import alejandro from '../../public/landing/alejandro.png';
 import Faqs from '../components/faqs';
 
 export default function Home() {
@@ -65,7 +65,8 @@ export default function Home() {
         </div>
         <div className="w-full p-16 flex items-center justify-center border">
           <p className="ft-4">
-            Cada pieza que creamos es un reflejo de tu esencia. <br/><br/>Diseñamos joyería personalizada con oro, plata y piedras
+            Cada pieza que creamos es un reflejo de tu esencia. <br/><br/>Diseñamos joyería personalizada con oro, plata
+            y piedras
             preciosas certificadas, cuidando cada detalle para que tu joya trascienda generaciones.
           </p>
         </div>
@@ -74,9 +75,9 @@ export default function Home() {
       <section className="flex flex-col py-40 bg-[#EFE6E3]/60">
         <div className="container">
           <div className="w-2/3 mx-auto">
-            <h2 className="ft-8 text-brand-1 text-center">Cada joya, una historia irrepetible</h2>
-            <p className="ft-3 text-center pt-12">Cada joya que creamos es única. Conoce algunas de nuestras piezas más
-              icónicas y encuentra inspiración</p>
+            <h2 className="ft-8 text-brand-1 text-center">Alta joyería creada para ti</h2>
+            <p className="ft-3 text-center pt-12">Diseñamos y esculpimos tus momentos más preciados en oro, platino y
+              gemas únicas. Exclusividad, artesanía y un sello personal en cada detalle.</p>
           </div>
         </div>
       </section>
@@ -97,9 +98,7 @@ export default function Home() {
               }}
             >
               <h3 className="ft-2 order-1 text-center md:order-2 mb-8 text-brand-1 font-bold">Anillos de compromiso</h3>
-              <p className="order-3 text-center">Maestros joyeros con más de 20 años de experiencia elaboran tu pieza
-                con
-                los mejores materiales.</p>
+              <p className="order-3 text-center">Diseños únicos que reflejan tu compromiso.</p>
             </div>
           </div>
           <div className="w-full">
@@ -115,9 +114,7 @@ export default function Home() {
               }}
             >
               <h3 className="ft-2 order-1 text-center md:order-2 mb-8 text-brand-1 font-bold">Anillos de boda</h3>
-              <p className="order-3 text-center">Maestros joyeros con más de 20 años de experiencia elaboran tu pieza
-                con
-                los mejores materiales.</p>
+              <p className="order-3 text-center">Alianzas personalizadas con significado eterno.</p>
             </div>
           </div>
           <div className="w-full">
@@ -133,9 +130,7 @@ export default function Home() {
               }}
             >
               <h3 className="ft-2 order-1 text-center md:order-2 mb-8 text-brand-1 font-bold">Collares y dijes</h3>
-              <p className="order-3 text-center">Maestros joyeros con más de 20 años de experiencia elaboran tu pieza
-                con
-                los mejores materiales.</p>
+              <p className="order-3 text-center">Piezas que expresan estilo y sofisticación.</p>
             </div>
           </div>
           <div className="w-full">
@@ -151,9 +146,7 @@ export default function Home() {
               }}
             >
               <h3 className="ft-2 order-1 text-center md:order-2 mb-8 text-brand-1 font-bold">Brazaletes y pulseras</h3>
-              <p className="order-3 text-center">Maestros joyeros con más de 20 años de experiencia elaboran tu pieza
-                con
-                los mejores materiales.</p>
+              <p className="order-3 text-center">Joyería que te acompaña todos los días.</p>
             </div>
           </div>
           <div className="w-full">
@@ -170,9 +163,7 @@ export default function Home() {
               }}
             >
               <h3 className="ft-2 order-1 text-center md:order-2 mb-8 text-brand-1 font-bold">Aretes</h3>
-              <p className="order-3 text-center">Maestros joyeros con más de 20 años de experiencia elaboran tu pieza
-                con
-                los mejores materiales.</p>
+              <p className="order-3 text-center">Detalles perfectos con el brillo ideal.</p>
             </div>
           </div>
         </div>
@@ -180,7 +171,7 @@ export default function Home() {
       {/*------------------------------------------------------------------ */}
       <section
         className="relative flex flex-col justify-end min-h-[40rem] md:min-h-[60rem] py-40 w-full -z-10 bg-[url(/landing/bg-ring.png)] bg-cover bg-top bg-no-repeat">
-        <div className='container'>
+        <div className="container">
           <h2 className="text-center">Un diseño que celebra tus logros</h2>
         </div>
       </section>
@@ -275,7 +266,7 @@ export default function Home() {
           >
             <h3 className="order-1 text-center md:order-2 mb-8 text-brand-1 font-bold">Maestría que se siente en cada
               detalle</h3>
-            <p className="order-3 text-center">Maestros joyeros con más de 20 años de experiencia elaboran tu pieza con
+            <p className="order-3 text-center">Más de 20 años de experiencia a cargo de elaborar tu pieza con
               los mejores materiales.</p>
           </div>
           <div

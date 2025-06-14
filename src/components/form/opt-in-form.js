@@ -4,9 +4,8 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { useRouter } from 'next/router';
 import { getCookie, setCookie } from 'cookies-next';
 import { useState } from 'react';
-import { restrictNumber, emailRegExp } from '../../utils/formValidators';
+import { restrictNumber } from '../../utils/formValidators';
 import fbEvent from '../../services/fbEvents';
-import { Select } from './formAtoms';
 
 export default function OptInForm({lastClick = ''}) {
   const [sending, setSending] = useState(false);
@@ -66,19 +65,19 @@ export default function OptInForm({lastClick = ''}) {
           )}
           className={errors.fullName && '!bg-red-200'}
           placeholder="Nombre"/>
-        <input
-          {...register(
-            'email',
-            {
-              required: true,
-              pattern: {
-                value: emailRegExp,
-                message: 'Revisa tu correo',
-              },
-            },
-          )}
-          className={errors.email && '!bg-red-200'}
-          placeholder="Email"/>
+        {/*<input*/}
+        {/*  {...register(*/}
+        {/*    'email',*/}
+        {/*    {*/}
+        {/*      required: true,*/}
+        {/*      pattern: {*/}
+        {/*        value: emailRegExp,*/}
+        {/*        message: 'Revisa tu correo',*/}
+        {/*      },*/}
+        {/*    },*/}
+        {/*  )}*/}
+        {/*  className={errors.email && '!bg-red-200'}*/}
+        {/*  placeholder="Email"/>*/}
         <input
           {...register(
             'phone',
@@ -93,7 +92,7 @@ export default function OptInForm({lastClick = ''}) {
           className={`w-full ${sending ? '!bg-transparent' : 'hover:!bg-brand-3'}`}
         >{
           !sending
-            ? 'Enviar →'
+            ? 'Comienza a diseñar tu joya →'
             : <span className="material-symbols-outlined animate-spin">progress_activity</span>
         }</button>
 

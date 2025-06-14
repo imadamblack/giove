@@ -1,26 +1,25 @@
 'use client';
 import { useForm, FormProvider } from 'react-hook-form';
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import { setCookie, getCookie } from 'cookies-next';
+import { useEffect, useMemo, useState } from 'react';
+import { getCookie } from 'cookies-next';
 import { info } from '../../info';
 import StepRenderer from '../components/form/stepRenderer';
 import fbEvent from '../services/fbEvents';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
 
 import i01 from '../../public/survey/01.png';
 import i02 from '../../public/landing/002.png';
 import i03 from '../../public/landing/003.png';
 import i04 from '../../public/landing/012.png';
 import i05 from '../../public/landing/006.png';
-import paola from '../../public/landing/paola.png'
-import eduardo from '../../public/landing/eduardo.png'
-import alejandro from '../../public/landing/alejandro.png'
+import paola from '../../public/landing/paola.png';
+import eduardo from '../../public/landing/eduardo.png';
+import alejandro from '../../public/landing/alejandro.png';
+import Link from 'next/link';
 
 
-const formSteps = [
+const formSteps = (ocasion = '') => [
   {
     type: 'checkpoint',
     name: 'checkpoint',
@@ -36,14 +35,14 @@ const formSteps = [
   },
   {
     type: 'radio',
-    name: 'para-quien',
-    title: `¿Para quién es esta pieza?`,
+    name: 'ocasion',
+    title: `¿Cuál es la ocasión?`,
     options: [
-      {value: 'propio', label: 'Es para mi'},
-      {value: 'esposa', label: 'Mi esposa/o'},
-      {value: 'novia', label: 'Mi novia/o'},
-      {value: 'hijos', label: 'Mi hijo/a'},
-      {value: 'mama', label: 'Mi mamá'},
+      {value: 'propuesta', label: 'Voy a proponer matrimonio'},
+      {value: 'boda', label: 'Me voy a casar'},
+      {value: 'aniversario', label: 'Es mi aniversario'},
+      {value: 'hijos', label: 'Nacimiento de un hijo'},
+      {value: 'cumpleanos', label: 'Cumpleaños'},
       {value: 'otro', label: 'Otro'},
     ],
     cols: 1,
@@ -51,16 +50,25 @@ const formSteps = [
   },
   {
     type: 'radio',
-    name: 'ocasion',
-    title: `¿Cuál es la ocasión?`,
-    options: [
-      {value: 'propuesta', label: 'Voy a proponer matrimonio'},
-      {value: 'boda', label: 'Me voy a casar'},
-      {value: 'aniversario', label: 'Es mi aniversario'},
-      {value: 'hijos', label: 'Tuve un hijo'},
-      {value: 'cumpleanos', label: 'Cumpleaños'},
-      {value: 'otro', label: 'Otro'},
-    ],
+    name: 'type',
+    title: `¿Qué tipo de pieza estás buscando?`,
+    options: (ocasion) => {
+      return ocasion === 'propuesta'
+        ? [
+          {value: 'anilloCompromiso', label: 'Anillo de compromiso'},
+          {value: 'otro', label: 'Otro'},
+        ] : ocasion === 'boda'
+          ? [
+            {value: 'anilloBoda', label: 'Anillos de bodas'},
+            {value: 'otro', label: 'Otro'},
+          ]
+          : [
+            {value: 'churumbela', label: 'Churumbela'},
+            {value: 'pulsera', label: 'Pulsera / Esclava'},
+            {value: 'cadena', label: 'Cadena'},
+            {value: 'aretes', label: 'Aretes'},
+          ];
+    },
     cols: 1,
     inputOptions: {required: true},
   },
@@ -74,21 +82,6 @@ const formSteps = [
       {value: '50,000-100,000', label: 'Entre $50,000 y $100,000'},
       {value: '100,000-200,000', label: 'Entre $100,000 y $200,000'},
       {value: '>200,000', label: 'Más de $200,000'},
-    ],
-    cols: 1,
-    inputOptions: {required: true},
-  },
-  {
-    type: 'radio',
-    name: 'type',
-    title: `¿Qué tipo de pieza estás buscando?`,
-    options: [
-      {value: 'anilloCompromiso', label: 'Anillo de compromiso'},
-      {value: 'anilloBoda', label: 'Anillos de bodas'},
-      {value: 'churumbela', label: 'Churumbela'},
-      {value: 'pulsera', label: 'Pulsera / Esclava'},
-      {value: 'cadena', label: 'Cadena'},
-      {value: 'aretes', label: 'Aretes'},
     ],
     cols: 1,
     inputOptions: {required: true},
@@ -153,24 +146,24 @@ const formSteps = [
     name: 'material',
     title: '¿De qué material?',
     options: [
-      {value: 'oro', label: 'Oro 18k'},
-      {value: 'oro-blanco', label: 'Oro Blanco'},
-      {value: 'plata', label: 'Plata'},
+      {value: 'oro-18k', label: 'Oro 18k (amarillo, blanco o rosado)'},
+      {value: 'oro-14k', label: 'Oro 14k (amarillo, blanco o rosado)'},
+      {value: 'platino', label: 'Platino'},
     ],
     cols: 1,
     inputOptions: {required: true},
   },
   {
     name: 'stone',
-    title: '¿Con qué piedras?',
+    title: '¿Con qué gemas?',
     type: 'radio',
     options: [
       {value: 'diamante', label: 'Diamante natural'},
-      {value: 'diamante-lab', label: 'Diamante de laboratorio'},
+      {value: 'zafiro', label: 'Zafiro'},
       {value: 'esmeralda', label: 'Esmeralda'},
       {value: 'rubi', label: 'Rubí'},
-      {value: 'no-se', label: 'No sé'},
-      {value: 'sin-piedra', label: 'No quiero piedras'},
+      {value: 'otra', label: 'Otras gemas'},
+      {value: 'sin-gema', label: 'No quiero gemas'},
     ],
     cols: 1,
     inputOptions: {required: true},
@@ -180,11 +173,12 @@ const formSteps = [
     name: 'checkpoint',
     render: () => (
       <div className={`relative my-12 flex-grow}`}>
-        <p className="ft-6 sans text-center font-bold">Joyería con piedras preciosas certificadas</p>
+        <p className="ft-6 sans text-center font-bold">Joyería con gemas preciosas certificadas</p>
         <div className="relative w-full my-8 pt-[80%] rounded-2xl overflow-hidden">
           <Image src={i04} layout="fill" objectFit="cover"/>
         </div>
-        <p className="ft-2 mt-4 text-center mb-12">Oro de 18K, plata y piedras preciosas con certificación GIA</p>
+        <p className="ft-2 mt-4 text-center mb-12">Oro de 18K, oro de 14K, platino y gemas preciosas con certificación
+          GIA</p>
       </div>
     ),
   },
@@ -198,7 +192,7 @@ const formSteps = [
     type: 'tel',
     name: 'phone',
     title: 'Ahora un WhatsApp para contactarte',
-    inputOptions: {required: true},
+    inputOptions: {required: true, maxLength: 10, minLength: 10},
   },
 ];
 
@@ -216,7 +210,17 @@ export default function Survey() {
     watch,
   } = methods;
 
-  const router = useRouter();
+  const ocasion = watch('ocasion');
+  console.log(ocasion);
+
+  const steps = useMemo(() => {
+    return formSteps(ocasion).map(step => {
+      if (typeof step.options === 'function') {
+        return {...step, options: step.options(ocasion)};
+      }
+      return step;
+    });
+  }, [ocasion]);
 
   useEffect(() => {
     if (showIntro) {
@@ -228,14 +232,14 @@ export default function Survey() {
     }
   }, [showIntro]);
 
-  const lastInputIndex = formSteps.reduce((lastIndex, step, i) => {
+  const lastInputIndex = steps.reduce((lastIndex, step, i) => {
     return step.type !== 'checkpoint' ? i : lastIndex;
   }, 0);
 
   const handleNext = async () => {
-    const currentStep = formSteps[formStep];
+    const currentStep = steps[formStep];
     if (currentStep.type === 'checkpoint') {
-      return setFormStep((prev) => Math.min(prev + 1, formSteps.length - 1));
+      return setFormStep((prev) => Math.min(prev + 1, steps.length - 1));
     }
 
     const valid = await methods.trigger(currentStep.name);
@@ -246,7 +250,7 @@ export default function Survey() {
 
     setInputError(null);
     window.scrollTo(0, 0);
-    setFormStep((prev) => Math.min(prev + 1, formSteps.length - 1));
+    setFormStep((prev) => Math.min(prev + 1, steps.length - 1));
   };
 
   const onSubmit = async (data) => {
@@ -327,7 +331,7 @@ export default function Survey() {
               className="flex flex-col flex-grow pb-[8rem]"
             >
               <div className="fixed inset-x-0 top-[40px] bg-gray-100 z-10">
-                <div className={`h-4 bg-brand-1`} style={{width: `${((formStep + 1) / formSteps.length) * 100}%`}}/>
+                <div className={`h-4 bg-brand-1`} style={{width: `${((formStep + 1) / steps.length) * 100}%`}}/>
               </div>
               <div
                 className="relative container !px-0 md:pb-0 flex flex-col flex-grow md:flex-grow-0 items-center pointer-events-auto touch-auto">
@@ -343,7 +347,7 @@ export default function Survey() {
                           transition={{duration: 0.4, ease: 'easeInOut'}}
                         >
                           <StepRenderer
-                            step={formSteps[formStep]}
+                            step={steps[formStep]}
                             index={formStep}
                             currentStep={formStep}
                             inputError={inputError}
@@ -352,8 +356,8 @@ export default function Survey() {
                         </motion.div>
                       </AnimatePresence>
                       <div
-                        className={`fixed p-8 bottom-0 inset-x-0 grid ${formSteps[formStep].type === 'checkpoint' ? 'grid-cols-1' : 'grid-cols-2'} gap-8 w-full mt-auto bg-white border-t-2 border-gray-200 z-50`}>
-                        {formSteps[formStep].type !== 'checkpoint' &&
+                        className={`fixed p-8 bottom-0 inset-x-0 grid ${steps[formStep].type === 'checkpoint' ? 'grid-cols-1' : 'grid-cols-2'} gap-8 w-full mt-auto bg-white border-t-2 border-gray-200 z-50`}>
+                        {steps[formStep].type !== 'checkpoint' &&
                           <button
                             type="button"
                             onClick={() => setFormStep(formStep - 1)}
@@ -402,7 +406,9 @@ export default function Survey() {
                 </div>
                 <div
                   className={`fixed p-8 bottom-0 inset-x-0 grid grid-cols-1 gap-8 w-full mt-auto bg-white border-t-2 border-gray-200 z-50`}>
-                  <a href="/" className="button mt-auto !w-full">Continuar</a>
+                  <Link href="/">
+                    <a className="button mt-auto !w-full">Continuar</a>
+                  </Link>
                 </div>
               </div>
             </div>

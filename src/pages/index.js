@@ -65,9 +65,8 @@ export default function Home() {
         </div>
         <div className="w-full p-16 flex items-center justify-center border">
           <p className="ft-4">
-            Cada pieza que creamos es un reflejo de tu esencia. <br/><br/>Diseñamos joyería personalizada con oro, plata
-            y piedras
-            preciosas certificadas, cuidando cada detalle para que tu joya trascienda generaciones.
+            Cada pieza que creamos es un reflejo de tu esencia. <br/><br/>Diseñamos joyería personalizada con oro 18k,
+            oro 14k, platino y piedras preciosas certificadas, cuidando cada detalle para que tu joya trascienda generaciones.
           </p>
         </div>
       </section>

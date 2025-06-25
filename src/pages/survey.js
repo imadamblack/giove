@@ -399,9 +399,8 @@ export default function Survey() {
                   <p className="ft-6 sans text-center font-bold">Cada gran momento merece ser celebrado</p>
                   <p className="ft-2 mt-4 text-center mb-12">
                     Cada pieza que creamos es un reflejo de tu esencia. Diseñamos joyería
-                    personalizada con oro, plata y piedras preciosas certificadas, cuidando cada detalle para que tu
-                    joya
-                    trascienda generaciones.
+                    personalizada con oro 18k, oro 14k, platino y piedras preciosas certificadas, cuidando cada detalle para que tu
+                    joya trascienda generaciones.
                   </p>
                 </div>
                 <div

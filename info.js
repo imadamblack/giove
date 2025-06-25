@@ -1,7 +1,7 @@
 export const info = {
   legalName: "Giove",
   companyName: "Giove",
-  description: "Joyas exclusivas de plata y oro, con piedras preciosas",
+  description: "Joyas exclusivas de oro y platino con piedras preciosas",
   email: {
     sender: "",
     recipients: [""],

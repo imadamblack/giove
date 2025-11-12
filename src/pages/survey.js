@@ -259,7 +259,7 @@ export default function Survey() {
     try {
       const _fbc = getCookie('_fbc');
       const _fbp = getCookie('_fbp');
-      data.whatsapp = '52' + data.phone.replace(/^(MX)?\+?(52)?\s?0?1?|\s|\(|\)|-|[a-zA-Z]/g, '');
+      data.whatsapp = '521' + data.phone.replace(/^(MX)?\+?(52)?\s?0?1?|\s|\(|\)|-|[a-zA-Z]/g, '');
 
       const payload = {...data, _fbc, _fbp};
 
